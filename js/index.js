@@ -58,9 +58,9 @@ console.groupEnd();
 console.group("Task 5");
 
 function getNullElement(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 0) {
-      console.log(arr.indexOf(0));
+  for (let key in arr) {
+    if (arr[key] === 0) {
+      console.log(key);
     }
   }
 }
@@ -129,4 +129,5 @@ console.group("Task 11");
 numbers.forEach((number) => console.log(Math.pow(number, 3)));
 
 console.groupEnd();
+
 console.groupEnd();
