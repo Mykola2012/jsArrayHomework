@@ -46,7 +46,7 @@ console.group("Task 4");
 
 function getEvenNumb(arr) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0 && arr[i] !== 0) {
+    if (arr[i] % 2 === 0) {
       console.log(arr[i]);
     }
   }
@@ -103,17 +103,16 @@ console.log("squaredNumbers :>> ", squaredNumbers);
 console.groupEnd();
 console.group("Task 9");
 
-console.log(
-  "isAllEvenNumbers :>> ",
-  numbers.every((number) => {
-    let i = 2;
-    const rootOfNumber = Math.sqrt(number);
-    while (i < rootOfNumber) {
-      if (number % i++ === 0) return false;
-    }
-    return number > 1;
-  })
-);
+console.log("isAllEvenNumbers :>> ", numbers.every(isRootOfNumber));
+
+function isRootOfNumber(number) {
+  let i = 2;
+  const rootOfNumber = Math.sqrt(number);
+  while (i < rootOfNumber) {
+    if (number % i++ === 0) return false;
+  }
+  return number > 1;
+}
 
 console.groupEnd();
 console.group("Task 10");
